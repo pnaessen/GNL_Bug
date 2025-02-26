@@ -6,7 +6,7 @@
 /*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 20:53:55 by pnaessen          #+#    #+#             */
-/*   Updated: 2025/02/05 20:53:55 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2025/02/26 10:29:13 by pnaessen         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	ft_update(char *str)
 		;
 	while (str[i])
 		str[j++] = str[i++];
-	// str[j] = '\0'; // BUG 4: Chaîne non terminée
+	// str[j] = '\0';
 }
 
 size_t	ft_strlen(const char *s)

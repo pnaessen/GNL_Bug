@@ -1,6 +1,6 @@
 NAME := GNL
 
-SRC:= $(addprefix $(SRC_DIR), get_next_line_utils.c get_next_line.c
+SRC:= $(addprefix $(SRC_DIR), get_next_line_utils.c get_next_line.c)
 OBJ_DIR:= .obj/
 OBJ:= $(SRC:$(SRC_DIR)%.c=$(OBJ_DIR)%.o)
 DEPS:= $(OBJ:%.o=%.d)
@@ -46,7 +46,7 @@ clean:
 	@echo "🧹 $(YELLOW)« La déconstruction est un acte de sagesse profonde. » - Nietzsche $(DEF_COLOR)"
 	rm -rf $(OBJ_DIR)
 
-fclean: clean
+fclean: 
 	@echo "$(RED)"
 	@echo "        💀"
 	@echo "       (X_X)"
@@ -66,4 +66,3 @@ info:
 	@echo "DEPS": $(DEPS)
 	@echo "$(GREEN)💡 « La connaissance est la lumière qui éclaire notre chemin. » - Aristote $(DEF_COLOR)"
 
-.PHONY: all clean fclean re
