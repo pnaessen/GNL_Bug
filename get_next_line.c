@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnaessen <pnaessen@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: pn <pn@student.42lyon.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 20:54:00 by pnaessen          #+#    #+#             */
-/*   Updated: 2025/02/26 10:40:37 by pnaessen         ###   ########lyon.fr   */
+/*   Updated: 2025/02/27 17:35:43 by pn               ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,19 +72,3 @@ char	*get_next_line(int fd)
 	return (line);     // BUG 3: Pas d'appel à ft_update ➔ buffer non nettoyé
 }
 
-int	main(void)
-{
-	int		fd;
-	char	*line;
-
-	fd = open("test.txt", O_RDONLY);
-	while (1)
-	{
-		line = get_next_line(fd);
-		if (line == NULL)
-			break ;
-		printf("%s", line);
-	}
-	close(fd);
-	return (0);
-}
